@@ -1,0 +1,17 @@
+# ninja log v5
+27	1269	7145733995979669	CMakeFiles/ToolTemplateLib.dir/lib/imgui/backends/imgui_impl_vulkan.cpp.obj	d9ecc75a8d5b4251
+88	1383	7145733997043300	CMakeFiles/ToolTemplateLib.dir/src/main.cpp.obj	47e12cd8c86878b2
+35	1296	7145733995989677	CMakeFiles/ToolTemplateLib.dir/lib/imgui/backends/imgui_impl_win32.cpp.obj	967608f392cb5beb
+68	2569	7145734009166132	CMakeFiles/ToolTemplateLib.dir/lib/imgui/imgui_tables.cpp.obj	c5de7f40fd418028
+49	1616	7145733999451125	CMakeFiles/ToolTemplateLib.dir/lib/imgui/imgui_demo.cpp.obj	7d17e95738bcc78e
+9	2548	7145734008935421	CMakeFiles/ToolTemplateLib.dir/lib/imgui/backends/imgui_impl_dx12.cpp.obj	2ae6dc3a22e48aa7
+16	2256	7145734005877805	CMakeFiles/ToolTemplateLib.dir/lib/imgui/backends/imgui_impl_dx9.cpp.obj	e276f21d96696f92
+21	2262	7145734005877805	CMakeFiles/ToolTemplateLib.dir/lib/imgui/backends/imgui_impl_glfw.cpp.obj	b6f0eb3962da1d8d
+58	3039	7145734013889917	CMakeFiles/ToolTemplateLib.dir/lib/imgui/imgui_draw.cpp.obj	f2d36bbdb0818b54
+97	3161	7145734015114414	CMakeFiles/ToolTemplateLib.dir/src/pch.cpp.obj	2d5129faf74dacd8
+80	3213	7145734015603199	CMakeFiles/ToolTemplateLib.dir/lib/imgui/imgui_widgets.cpp.obj	731330f654a2ee16
+105	3374	7145734017202006	CMakeFiles/ToolTemplate.dir/cmake_pch.hxx.pch	e9a8fac0484657eb
+3375	3864	7145734022177602	CMakeFiles/ToolTemplate.dir/src/main.cpp.obj	881e7bb1deea8d06
+42	4208	7145734025488645	CMakeFiles/ToolTemplateLib.dir/lib/imgui/imgui.cpp.obj	d7c8a6fb9bc4ff53
+4208	4297	7145734026388570	bin/ToolTemplateLib.lib	7d2168e6fc57ebf4
+12	172	7145736007017962	bin/ToolTemplate.exe	7f0de88fe10c5a86

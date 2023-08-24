@@ -1,0 +1,4 @@
+C:/dev/tool-template/build/CMakeFiles/ToolTemplateLib.dir
+C:/dev/tool-template/build/CMakeFiles/ToolTemplate.dir
+C:/dev/tool-template/build/CMakeFiles/edit_cache.dir
+C:/dev/tool-template/build/CMakeFiles/rebuild_cache.dir
