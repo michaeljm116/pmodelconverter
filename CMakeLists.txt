@@ -43,10 +43,10 @@ file(GLOB SYSTEMS_HEADERS
 # Create the library
 add_library(ToolTemplateLib STATIC ${SYSTEMS_SOURCE} ${SYSTEMS_HEADERS})
 #target_link_libraries(ToolTemplateLib Vulkan::Headers)
-target_link_libraries(ToolTemplateLib "../lib/imgui/examples/libs/glfw/lib-vc2010-64/glfw3")
+
+target_link_libraries(ToolTemplateLib "../lib/glfw3")
 
 # Link the include libs
-target_include_directories(ToolTemplateLib PRIVATE lib/vulkan-headers/include/)
 target_include_directories(ToolTemplateLib PRIVATE lib/imgui)
 
 find_package(Vulkan REQUIRED)
