@@ -26,7 +26,6 @@ include_directories(
     lib/imgui
     lib/imgui/backends
     lib/imgui/examples/libs/glfw/include
-    lib/vulkan-headers/include
 )
 
 # Add source files and header files
@@ -44,7 +43,7 @@ file(GLOB SYSTEMS_HEADERS
 # Create the library
 add_library(ToolTemplateLib STATIC ${SYSTEMS_SOURCE} ${SYSTEMS_HEADERS})
 #target_link_libraries(ToolTemplateLib Vulkan::Headers)
-target_link_libraries(ToolTemplateLib "C:/dev/tool-template/lib/imgui/examples/libs/glfw/lib-vc2010-64/glfw3.lib")
+target_link_libraries(ToolTemplateLib "../lib/imgui/examples/libs/glfw/lib-vc2010-64/glfw3")
 
 # Link the include libs
 target_include_directories(ToolTemplateLib PRIVATE lib/vulkan-headers/include/)
@@ -52,7 +51,6 @@ target_include_directories(ToolTemplateLib PRIVATE lib/imgui)
 
 find_package(Vulkan REQUIRED)
 target_link_libraries(ToolTemplateLib Vulkan::Vulkan)
-
 
 # Define DEBUG_MODE for debug configuration
 target_compile_definitions(ToolTemplateLib PRIVATE $<$<CONFIG:Debug>:DEBUG_MODE>)
