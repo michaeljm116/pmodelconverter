@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(ToolTemplate)
+project(PModelConverter)
 
 # Set the output directories
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
@@ -41,21 +41,21 @@ file(GLOB SYSTEMS_HEADERS
 )
 
 # Create the library
-add_library(ToolTemplateLib STATIC ${SYSTEMS_SOURCE} ${SYSTEMS_HEADERS})
-#target_link_libraries(ToolTemplateLib Vulkan::Headers)
+add_library(PModelConverterLib STATIC ${SYSTEMS_SOURCE} ${SYSTEMS_HEADERS})
+#target_link_libraries(PModelConverterLib Vulkan::Headers)
 
-target_link_libraries(ToolTemplateLib "../lib/glfw3")
+target_link_libraries(PModelConverterLib "../lib/glfw3")
 
 # Link the include libs
-target_include_directories(ToolTemplateLib PRIVATE lib/imgui)
+target_include_directories(PModelConverterLib PRIVATE lib/imgui)
 
 find_package(Vulkan REQUIRED)
-target_link_libraries(ToolTemplateLib Vulkan::Vulkan)
+target_link_libraries(PModelConverterLib Vulkan::Vulkan)
 
 # Define DEBUG_MODE for debug configuration
-target_compile_definitions(ToolTemplateLib PRIVATE $<$<CONFIG:Debug>:DEBUG_MODE>)
+target_compile_definitions(PModelConverterLib PRIVATE $<$<CONFIG:Debug>:DEBUG_MODE>)
 
 # Create the executable
-add_executable(ToolTemplate src/main.cpp)
-target_precompile_headers(ToolTemplate PRIVATE include/pch.h)
-target_link_libraries(ToolTemplate ToolTemplateLib)
+add_executable(PModelConverter src/main.cpp)
+target_precompile_headers(PModelConverter PRIVATE include/pch.h)
+target_link_libraries(PModelConverter PModelConverterLib)
