@@ -5,6 +5,7 @@ class App{
     App(ImGuiIO& in_io);
     ~App();
     void run_app();
+    void hello_world();
 
     // Our state
     public:

@@ -10,6 +10,14 @@ App::~App()
 
 void App::run_app()
 {            
+    hello_world();
+}
+
+void App::hello_world()
+{
+    if(show_demo_window)
+        ImGui::ShowDemoWindow(&show_demo_window);
+
     static float f = 0.0f;
     static int counter = 0;
 
@@ -29,4 +37,13 @@ void App::run_app()
 
     ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
     ImGui::End();
+
+    if(show_another_window)
+    {
+        ImGui::Begin("Another Window", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
+        ImGui::Text("Hello from another window!");
+        if (ImGui::Button("Close Me"))
+            show_another_window = false;
+        ImGui::End();
+    }
 }

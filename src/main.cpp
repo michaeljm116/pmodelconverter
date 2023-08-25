@@ -19,7 +19,7 @@
 #include <GLFW/glfw3.h>
 #include <vulkan/vulkan.h>
 //#include <vulkan/vulkan_beta.h>
-
+#include "globals.h"
 #include "app.h"
 
 // [Win32] Our example includes a copy of glfw3.lib pre-compiled with VS2010 to maximize ease of testing and compatibility with old VS compilers.
@@ -35,7 +35,7 @@
 #endif
 
 // Data
-static VkAllocationCallbacks*   g_Allocator = nullptr;
+/*static VkAllocationCallbacks*   g_Allocator = nullptr;
 static VkInstance               g_Instance = VK_NULL_HANDLE;
 static VkPhysicalDevice         g_PhysicalDevice = VK_NULL_HANDLE;
 static VkDevice                 g_Device = VK_NULL_HANDLE;
@@ -47,7 +47,7 @@ static VkDescriptorPool         g_DescriptorPool = VK_NULL_HANDLE;
 
 static ImGui_ImplVulkanH_Window g_MainWindowData;
 static int                      g_MinImageCount = 2;
-static bool                     g_SwapChainRebuild = false;
+static bool                     g_SwapChainRebuild = false;*/
 
 static void glfw_error_callback(int error, const char* description)
 {
@@ -518,24 +518,14 @@ int main(int, char**)
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
         app.run_app();
 
-        // 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
-        if (app.show_demo_window)
-            ImGui::ShowDemoWindow(&app.show_demo_window);
 
-        // 2. Show a simple window that we create ourselves. We use a Begin/End pair to create a named window.
-        app.run_app();
 
-        // 3. Show another simple window.
-        if (app.show_another_window)
-        {
-            ImGui::Begin("Another Window", &app.show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-            ImGui::Text("Hello from another window!");
-            if (ImGui::Button("Close Me"))
-                app.show_another_window = false;
-            ImGui::End();
-        }
+////////////////////////////////////////////////////////////////////////////////////////////
 
         // Rendering
         ImGui::Render();
