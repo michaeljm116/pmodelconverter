@@ -36,6 +36,7 @@ file(GLOB SYSTEMS_SOURCE
 )
 file(GLOB SYSTEMS_HEADERS
     include/*.h
+    include/*.hpp
     lib/imgui/*.h
     lib/imgui/backends/*.h
 )
